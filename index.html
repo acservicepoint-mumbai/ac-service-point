@@ -83,34 +83,34 @@
 </header>
 
 <!-- ========================= HERO SLIDER ========================= -->
-<section class="hero-slider" id="heroSlider" style="position: relative; overflow: hidden; width: 100%;">
-  <div class="hero-slide active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+<section class="hero-slider" id="heroSlider" style="position: relative; overflow: hidden; width: 100%; min-height: 85vh; display: flex; align-items: center; padding-top: 110px; padding-bottom: 60px; box-sizing: border-box;">
+  <div class="hero-slide active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
     <img src="images/hero-slide-1.jpg" alt="AC Service" style="width: 100%; height: 100%; object-fit: cover;" />
   </div>
-  <div class="hero-slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+  <div class="hero-slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
     <img src="images/hero-slide-2.jpg" alt="AC Service" style="width: 100%; height: 100%; object-fit: cover;" />
   </div>
-  <div class="hero-slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+  <div class="hero-slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
     <img src="images/hero-slide-1.jpg" alt="AC Service" style="width: 100%; height: 100%; object-fit: cover;" />
   </div>
 
   <div class="hero-content" style="position: relative; z-index: 2; width: 100%; box-sizing: border-box;">
-    <div class="container-custom" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; box-sizing: border-box;">
-      <div class="hero-text animate-fade-in-up" style="max-width: 100%;">
-        <span class="hero-badge">Trusted Repair Service</span>
-        <h1 class="hero-title text-shadow" style="word-wrap: break-word; overflow-wrap: break-word;">
+    <div class="container-custom" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
+      <div class="hero-text animate-fade-in-up" style="max-width: 100%; box-sizing: border-box;">
+        <span class="hero-badge" style="display: inline-block; margin-bottom: 12px; font-size: 14px; font-weight: 600;">Trusted Repair Service</span>
+        <h1 class="hero-title text-shadow" style="font-size: clamp(26px, 5vw, 48px); line-height: 1.2; word-break: break-word; overflow-wrap: break-word; margin-bottom: 15px;">
           Professional Appliance <br />
           <span class="accent-text">Repair &amp; Maintenance</span>
         </h1>
-        <p class="hero-desc" style="word-wrap: break-word; overflow-wrap: break-word;">
+        <p class="hero-desc" style="font-size: clamp(14px, 2vw, 16px); line-height: 1.5; word-break: break-word; overflow-wrap: break-word; margin-bottom: 25px; max-width: 700px;">
           AC Service Point provides professional repair, installation, uninstallation, maintenance, AMC, and custom service packages for Split/Window ACs, Cassette ACs, Tower ACs, VRF systems, Ductable ACs, Package ACs, Washing Machines, Refrigerators, and Microwave Ovens across Mumbai, Thane, Navi Mumbai and beyond.
         </p>
-        <div class="hero-actions" style="display: flex; flex-wrap: wrap; gap: 10px;">
-          <a href="services.html" class="btn-primary" style="max-width: 100%; box-sizing: border-box;">
+        <div class="hero-actions" style="display: flex; flex-wrap: wrap; gap: 12px; width: 100%;">
+          <a href="services.html" class="btn-primary" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; box-sizing: border-box; text-decoration: none;">
             Book Now
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
-          <a href="tel:8655887167" class="btn-outline-white" style="max-width: 100%; box-sizing: border-box;">
+          <a href="tel:8655887167" class="btn-outline-white" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; box-sizing: border-box; text-decoration: none;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             Call Now
           </a>
@@ -119,21 +119,21 @@
     </div>
   </div>
 
-  <div class="slider-dots" id="sliderDots" style="position: relative; z-index: 3;">
-    <button class="active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
-    <button onclick="goToSlide(1)" aria-label="Slide 2"></button>
-    <button onclick="goToSlide(2)" aria-label="Slide 3"></button>
+  <div class="slider-dots" id="sliderDots" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; gap: 8px;">
+    <button class="active" onclick="goToSlide(0)" aria-label="Slide 1" style="width: 10px; height: 10px; border-radius: 50%; border: none; cursor: pointer;"></button>
+    <button onclick="goToSlide(1)" aria-label="Slide 2" style="width: 10px; height: 10px; border-radius: 50%; border: none; cursor: pointer;"></button>
+    <button onclick="goToSlide(2)" aria-label="Slide 3" style="width: 10px; height: 10px; border-radius: 50%; border: none; cursor: pointer;"></button>
   </div>
 </section>
 
 <!-- ========================= STATS BAR ========================= -->
-<section class="stats-bar" style="width: 100%; box-sizing: border-box;">
-  <div class="container-custom" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; box-sizing: border-box;">
-    <div class="stats-grid" style="display: flex; flex-wrap: wrap; width: 100%; box-sizing: border-box;">
-      <div style="flex: 1; min-width: 140px; box-sizing: border-box;"><p class="stat-value">5+</p><p class="stat-label">Years of Experience</p></div>
-      <div style="flex: 1; min-width: 140px; box-sizing: border-box;"><p class="stat-value">50+</p><p class="stat-label">Expert Technicians</p></div>
-      <div style="flex: 1; min-width: 140px; box-sizing: border-box;"><p class="stat-value">30+</p><p class="stat-label">Locations Served</p></div>
-      <div style="flex: 1; min-width: 140px; box-sizing: border-box;"><p class="stat-value">50000+</p><p class="stat-label">Happy Customers</p></div>
+<section class="stats-bar" style="width: 100%; box-sizing: border-box; padding: 35px 0; background: #ffffff; position: relative; z-index: 5; display: block;">
+  <div class="container-custom" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
+    <div class="stats-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; width: 100%; box-sizing: border-box; text-align: center;">
+      <div style="box-sizing: border-box;"><p class="stat-value" style="font-size: 28px; font-weight: bold; margin: 0 0 5px 0; color: #0056b3;">5+</p><p class="stat-label" style="font-size: 14px; margin: 0; color: #333;">Years of Experience</p></div>
+      <div style="box-sizing: border-box;"><p class="stat-value" style="font-size: 28px; font-weight: bold; margin: 0 0 5px 0; color: #0056b3;">50+</p><p class="stat-label" style="font-size: 14px; margin: 0; color: #333;">Expert Technicians</p></div>
+      <div style="box-sizing: border-box;"><p class="stat-value" style="font-size: 28px; font-weight: bold; margin: 0 0 5px 0; color: #0056b3;">30+</p><p class="stat-label" style="font-size: 14px; margin: 0; color: #333;">Locations Served</p></div>
+      <div style="box-sizing: border-box;"><p class="stat-value" style="font-size: 28px; font-weight: bold; margin: 0 0 5px 0; color: #0056b3;">50000+</p><p class="stat-label" style="font-size: 14px; margin: 0; color: #333;">Happy Customers</p></div>
     </div>
   </div>
 </section>
