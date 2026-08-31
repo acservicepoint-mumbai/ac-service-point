@@ -83,34 +83,34 @@
 </header>
 
 <!-- ========================= HERO SLIDER ========================= -->
-<section class="hero-slider" id="heroSlider">
-  <div class="hero-slide active">
-    <img src="images/hero-slide-1.jpg" alt="AC Service" />
+<section class="hero-slider" id="heroSlider" style="position: relative; overflow: hidden; width: 100%;">
+  <div class="hero-slide active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <img src="images/hero-slide-1.jpg" alt="AC Service" style="width: 100%; height: 100%; object-fit: cover;" />
   </div>
-  <div class="hero-slide">
-    <img src="images/hero-slide-2.jpg" alt="AC Service" />
+  <div class="hero-slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <img src="images/hero-slide-2.jpg" alt="AC Service" style="width: 100%; height: 100%; object-fit: cover;" />
   </div>
-  <div class="hero-slide">
-    <img src="images/hero-slide-1.jpg" alt="AC Service" />
+  <div class="hero-slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <img src="images/hero-slide-1.jpg" alt="AC Service" style="width: 100%; height: 100%; object-fit: cover;" />
   </div>
 
-  <div class="hero-content">
-    <div class="container-custom">
-      <div class="hero-text animate-fade-in-up">
+  <div class="hero-content" style="position: relative; z-index: 2; width: 100%; box-sizing: border-box;">
+    <div class="container-custom" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; box-sizing: border-box;">
+      <div class="hero-text animate-fade-in-up" style="max-width: 100%;">
         <span class="hero-badge">Trusted Repair Service</span>
-        <h1 class="hero-title text-shadow">
+        <h1 class="hero-title text-shadow" style="word-wrap: break-word; overflow-wrap: break-word;">
           Professional Appliance <br />
           <span class="accent-text">Repair &amp; Maintenance</span>
         </h1>
-        <p class="hero-desc">
+        <p class="hero-desc" style="word-wrap: break-word; overflow-wrap: break-word;">
           AC Service Point provides professional repair, installation, uninstallation, maintenance, AMC, and custom service packages for Split/Window ACs, Cassette ACs, Tower ACs, VRF systems, Ductable ACs, Package ACs, Washing Machines, Refrigerators, and Microwave Ovens across Mumbai, Thane, Navi Mumbai and beyond.
         </p>
-        <div class="hero-actions">
-          <a href="services.html" class="btn-primary">
-  Book Now
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-</a>
-          <a href="tel:8655887167" class="btn-outline-white">
+        <div class="hero-actions" style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <a href="services.html" class="btn-primary" style="max-width: 100%; box-sizing: border-box;">
+            Book Now
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="tel:8655887167" class="btn-outline-white" style="max-width: 100%; box-sizing: border-box;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             Call Now
           </a>
@@ -119,7 +119,7 @@
     </div>
   </div>
 
-  <div class="slider-dots" id="sliderDots">
+  <div class="slider-dots" id="sliderDots" style="position: relative; z-index: 3;">
     <button class="active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
     <button onclick="goToSlide(1)" aria-label="Slide 2"></button>
     <button onclick="goToSlide(2)" aria-label="Slide 3"></button>
@@ -127,13 +127,13 @@
 </section>
 
 <!-- ========================= STATS BAR ========================= -->
-<section class="stats-bar">
-  <div class="container-custom">
-    <div class="stats-grid">
-      <div><p class="stat-value">5+</p><p class="stat-label">Years of Experience</p></div>
-      <div><p class="stat-value">50+</p><p class="stat-label">Expert Technicians</p></div>
-      <div><p class="stat-value">30+</p><p class="stat-label">Locations Served</p></div>
-      <div><p class="stat-value">50000+</p><p class="stat-label">Happy Customers</p></div>
+<section class="stats-bar" style="width: 100%; box-sizing: border-box;">
+  <div class="container-custom" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; box-sizing: border-box;">
+    <div class="stats-grid" style="display: flex; flex-wrap: wrap; width: 100%; box-sizing: border-box;">
+      <div style="flex: 1; min-width: 140px; box-sizing: border-box;"><p class="stat-value">5+</p><p class="stat-label">Years of Experience</p></div>
+      <div style="flex: 1; min-width: 140px; box-sizing: border-box;"><p class="stat-value">50+</p><p class="stat-label">Expert Technicians</p></div>
+      <div style="flex: 1; min-width: 140px; box-sizing: border-box;"><p class="stat-value">30+</p><p class="stat-label">Locations Served</p></div>
+      <div style="flex: 1; min-width: 140px; box-sizing: border-box;"><p class="stat-value">50000+</p><p class="stat-label">Happy Customers</p></div>
     </div>
   </div>
 </section>
