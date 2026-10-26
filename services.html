@@ -129,197 +129,225 @@ function gtag_report_conversion(url) {
 </head>
 <body>
 
-<header class="site-header">
-  <div class="top-bar">
+<!-- ========================= HEADER (ABOUT PAGE) ========================= -->
+<header class="site-header" style="box-shadow: 0 4px 20px rgba(0, 210, 255, 0.3); font-family: sans-serif;">
+  <!-- Top Bar -->
+  <div class="top-bar" style="background: #030712; padding: 8px 0; border-bottom: 2px solid #00d2ff;">
     <div class="container-custom">
       <a href="index.html" class="brand" style="text-decoration: none; display: flex; align-items: center;">
         <div>
-          <span class="brand-name" style="font-weight: 800; font-size: 22px; letter-spacing: 0.5px;">
-            <span style="background: #1a73e8; color: #ffffff; padding: 2px 6px; border-radius: 4px; margin-right: 2px;">A</span><span style="background: #ff2222; color: #ffffff; padding: 2px 6px; border-radius: 4px; margin-right: 6px;">C</span>
-            <span style="color: #1a73e8;">SERVICE</span> <span style="color: #ff2222;">POINT</span>
+          <span class="brand-name" style="font-weight: 900; font-size: 22px; letter-spacing: 0.5px;">
+            <span style="background: linear-gradient(135deg, #00d2ff, #0072ff); color: #ffffff; padding: 3px 8px; border-radius: 6px; margin-right: 2px; box-shadow: 0 0 10px #00d2ff; font-weight: 900;">A</span><span style="background: linear-gradient(135deg, #ffd700, #ff8c00); color: #000000; padding: 3px 8px; border-radius: 6px; margin-right: 6px; box-shadow: 0 0 10px #ffd700; font-weight: 900;">C</span>
+            <span style="color: #00d2ff; text-shadow: 0 0 12px rgba(0, 210, 255, 0.9); font-weight: 800;">SERVICE</span> 
+            <span style="color: #ffd700; text-shadow: 0 0 12px rgba(255, 215, 0, 0.9); font-weight: 800;">POINT</span>
           </span>
         </div>
       </a>
-      <div class="phones">
-        <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <a onclick="return gtag_report_conversion('tel:8655887167');" href="tel:8655887167">8655887167</a>
-        <span class="sep">/</span>
-        <a onclick="return gtag_report_conversion('tel:9336630614');" href="tel:9336630614">9336630614</a>
+      <div class="phones" style="font-weight: 800; font-size: 15px; display: flex; align-items: center;">
+        <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2.5" style="width: 18px; height: 18px; vertical-align: middle; filter: drop-shadow(0 0 6px #00d2ff);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <a onclick="return gtag_report_conversion('tel:8655887167');" href="tel:8655887167" style="color: #00d2ff; text-decoration: none; text-shadow: 0 0 10px rgba(0, 210, 255, 0.9); margin-left: 5px;">8655887167</a>
+        <span class="sep" style="color: #ffd700; margin: 0 6px; font-weight: 900; text-shadow: 0 0 8px #ffd700;">/</span>
+        <a onclick="return gtag_report_conversion('tel:9336630614');" href="tel:9336630614" style="color: #ffd700; text-decoration: none; text-shadow: 0 0 10px rgba(255, 215, 0, 0.9);">9336630614</a>
       </div>
     </div>
   </div>
 
-  <nav class="navbar" id="navbar">
-    <div class="container-custom nav-inner">
+  <!-- Main Navbar -->
+  <nav class="navbar" id="navbar" style="background: linear-gradient(135deg, #0b132b, #1c2541);">
+    <div class="container-custom nav-inner" style="display:flex; justify-content:space-between; align-items:center; padding: 12px 15px;">
+      
+      <!-- Mobile Toggle Button -->
+      <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu" style="background: linear-gradient(135deg, #00d2ff, #0072ff); border: none; border-radius: 8px; padding: 7px 12px; cursor: pointer; color: #ffffff; box-shadow: 0 0 15px rgba(0, 210, 255, 0.9);">
+        <svg id="menuIconOpen" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" style="width: 22px; height: 22px;"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="menuIconClose" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" style="display:none; width: 22px; height: 22px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <!-- Desktop Nav Links -->
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="index.html" style="color: #00d2ff; font-weight: 700; text-decoration: none; text-shadow: 0 0 8px rgba(0, 210, 255, 0.7);">Home</a></li>
+        <li><a href="about.html" class="active" style="color: #ffd700; font-weight: 800; text-decoration: none; text-shadow: 0 0 10px rgba(255, 215, 0, 0.9); border-bottom: 2px solid #ffd700; padding-bottom: 2px;">About</a></li>
         <li class="dropdown" id="serviceDropdown">
-          <button type="button" onclick="toggleDropdown()">
+          <button type="button" onclick="toggleDropdown()" style="background: none; border: none; color: #00d2ff; font-weight: 800; font-size: 15px; cursor: pointer; display: flex; align-items: center; gap: 4px; padding: 0; text-shadow: 0 0 10px rgba(0, 210, 255, 0.9);">
             Service
-            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2.5" style="width: 16px; height: 16px;"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <ul class="dropdown-menu">
-            <li><a href="ac-repair.html">Air Conditioner Repair</a></li>
-            <li><a href="washing-machine-repair.html">Washing Machine Repair</a></li>
-            <li><a href="refrigerator-repair.html">Refrigerator Repair</a></li>
-            <li><a href="microwave-oven-repair.html">Microwave Oven Repair</a></li>
+          <ul class="dropdown-menu" style="background: #030712; border: 2px solid #00d2ff; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 210, 255, 0.6); padding: 8px 0;">
+            <li><a href="ac-repair.html" style="color: #00d2ff; text-decoration: none; font-weight: 700; display: block; padding: 10px 18px; text-shadow: 0 0 8px rgba(0,210,255,0.5);">❄️ Air Conditioner Repair</a></li>
+            <li><a href="washing-machine-repair.html" style="color: #ffd700; text-decoration: none; font-weight: 700; display: block; padding: 10px 18px; text-shadow: 0 0 8px rgba(255,215,0,0.5);">🌀 Washing Machine Repair</a></li>
+            <li><a href="refrigerator-repair.html" style="color: #00d2ff; text-decoration: none; font-weight: 700; display: block; padding: 10px 18px; text-shadow: 0 0 8px rgba(0,210,255,0.5);">🧊 Refrigerator Repair</a></li>
+            <li><a href="microwave-oven-repair.html" style="color: #ffd700; text-decoration: none; font-weight: 700; display: block; padding: 10px 18px; text-shadow: 0 0 8px rgba(255,215,0,0.5);">🔥 Microwave Oven Repair</a></li>
           </ul>
         </li>
-        <li><a href="services.html" class="active">Booking</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="services.html" style="color: #00d2ff; font-weight: 700; text-decoration: none; text-shadow: 0 0 8px rgba(0, 210, 255, 0.7);">Booking</a></li>
+        <li><a href="contact.html" style="color: #ffd700; font-weight: 700; text-decoration: none; text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);">Contact</a></li>
       </ul>
 
-      <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
-        <svg id="menuIconOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        <svg id="menuIconClose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
+      <!-- Shiny Gold CTA Button -->
+      <a href="services.html" style="background: linear-gradient(135deg, #FFD700, #FF8C00); color: #000000; padding: 8px 20px; border-radius: 25px; font-weight: 900; text-decoration: none; font-size: 13px; box-shadow: 0 0 15px #FFD700, 0 0 25px rgba(255, 140, 0, 0.9); text-transform: uppercase; letter-spacing: 0.5px;">Book Now</a>
     </div>
 
-    <div class="mobile-menu" id="mobileMenu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+    <!-- Super Colorful & Glowing Mobile Menu (About Active) -->
+    <div class="mobile-menu" id="mobileMenu" style="background: linear-gradient(180deg, #030712, #0b132b); border-top: 2px solid #ffd700; padding: 18px; box-shadow: inset 0 0 20px rgba(0, 210, 255, 0.3);">
+      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+        
         <li>
-          <button type="button" class="mobile-dropdown-toggle" onclick="toggleMobileDropdown()">
-            Service
-            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          <a href="index.html" style="color: #00d2ff; font-weight: 800; text-decoration: none; font-size: 16px; text-shadow: 0 0 8px rgba(0, 210, 255, 0.8); display: block; background: rgba(0, 210, 255, 0.1); padding: 10px 15px; border-radius: 8px; border-left: 4px solid #00d2ff;">🏠 Home</a>
+        </li>
+        
+        <li>
+          <a href="about.html" class="active" style="color: #ffd700; font-weight: 900; text-decoration: none; font-size: 16px; text-shadow: 0 0 10px rgba(255, 215, 0, 0.9); display: block; background: rgba(255, 215, 0, 0.15); padding: 10px 15px; border-radius: 8px; border-left: 4px solid #ffd700;">ℹ️ About</a>
+        </li>
+        
+        <li>
+          <button type="button" class="mobile-dropdown-toggle" onclick="toggleMobileDropdown()" style="background: rgba(0, 210, 255, 0.1); border: none; border-left: 4px solid #00d2ff; border-radius: 8px; color: #00d2ff; font-weight: 900; font-size: 16px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 10px 15px; text-shadow: 0 0 10px rgba(0, 210, 255, 0.9);">
+            <span>🛠️ Service</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2.5" style="width: 18px; height: 18px;"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <ul class="mobile-submenu" id="mobileSubmenu">
-            <li><a href="ac-repair.html">Air Conditioner Repair</a></li>
-            <li><a href="washing-machine-repair.html">Washing Machine Repair</a></li>
-            <li><a href="refrigerator-repair.html">Refrigerator Repair</a></li>
-            <li><a href="microwave-oven-repair.html">Microwave Oven Repair</a></li>
+          
+          <ul class="mobile-submenu" id="mobileSubmenu" style="list-style: none; padding-left: 10px; margin-top: 8px; display: flex; flex-direction: column; gap: 8px; border-left: 2px solid #ffd700;">
+            <li><a href="ac-repair.html" style="color: #00d2ff; text-decoration: none; font-size: 14px; font-weight: 700; display: block; padding: 6px 12px; text-shadow: 0 0 8px rgba(0,210,255,0.6);">❄️ Air Conditioner Repair</a></li>
+            <li><a href="washing-machine-repair.html" style="color: #ffd700; text-decoration: none; font-size: 14px; font-weight: 700; display: block; padding: 6px 12px; text-shadow: 0 0 8px rgba(255,215,0,0.6);">🌀 Washing Machine Repair</a></li>
+            <li><a href="refrigerator-repair.html" style="color: #00d2ff; text-decoration: none; font-size: 14px; font-weight: 700; display: block; padding: 6px 12px; text-shadow: 0 0 8px rgba(0,210,255,0.6);">🧊 Refrigerator Repair</a></li>
+            <li><a href="microwave-oven-repair.html" style="color: #ffd700; text-decoration: none; font-size: 14px; font-weight: 700; display: block; padding: 6px 12px; text-shadow: 0 0 8px rgba(255,215,0,0.6);">🔥 Microwave Oven Repair</a></li>
           </ul>
         </li>
-        <li><a href="services.html" class="active">Booking</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        
+        <li>
+          <a href="services.html" style="color: #00d2ff; font-weight: 800; text-decoration: none; font-size: 16px; text-shadow: 0 0 8px rgba(0, 210, 255, 0.8); display: block; background: rgba(0, 210, 255, 0.1); padding: 10px 15px; border-radius: 8px; border-left: 4px solid #00d2ff;">📅 Booking</a>
+        </li>
+        
+        <li>
+          <a href="contact.html" style="color: #ffd700; font-weight: 800; text-decoration: none; font-size: 16px; text-shadow: 0 0 8px rgba(255, 215, 0, 0.8); display: block; background: rgba(255, 215, 0, 0.1); padding: 10px 15px; border-radius: 8px; border-left: 4px solid #ffd700;">📞 Contact</a>
+        </li>
+        
       </ul>
     </div>
   </nav>
 </header>
 
-<div class="page-header">
-  <div class="page-header-bg" style="background-image:url('images/page-header-bg.jpg')">
+<!-- ========================= PAGE HEADER ========================= -->
+<div class="page-header" style="font-family: sans-serif; border-bottom: 2px solid #00d2ff;">
+  <div class="page-header-bg" style="background-image:linear-gradient(rgba(3, 7, 18, 0.45), rgba(3, 7, 18, 0.65)), url('images/page-header-bg.jpg'); background-size: cover; background-position: center; padding: 55px 0; text-align: center;">
     <div class="container-custom">
-      <h1 class="text-shadow">Booking</h1>
+      <h1 class="text-shadow" style="color: #ffd700; font-size: 38px; font-weight: 900; margin: 0; text-shadow: 0 0 15px rgba(255, 215, 0, 0.9); text-transform: uppercase;">Booking</h1>
     </div>
   </div>
-  <div class="breadcrumb-bar">
+  <div class="breadcrumb-bar" style="background: #030712; padding: 12px 0;">
     <div class="container-custom">
-      <ul class="breadcrumb">
-        <li><a href="index.html">Home</a></li>
-        <svg class="sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-        <li class="current">Services</li>
+      <ul class="breadcrumb" style="list-style: none; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 14px;">
+        <li><a href="index.html" style="color: #00d2ff; text-decoration: none; text-shadow: 0 0 8px rgba(0, 210, 255, 0.7);">Home</a></li>
+        <svg class="sep" viewBox="0 0 24 24" fill="none" stroke="#ffd700" stroke-width="2.5" style="width: 14px; height: 14px;"><polyline points="9 18 15 12 9 6"/></svg>
+        <li class="current" style="color: #ffd700; text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);">Services</li>
       </ul>
     </div>
   </div>
 </div>
 
 <!-- ================= STYLISH BOOKING FORM PLACED AT THE TOP ================= -->
-<section class="top-booking-wrap">
-  <div class="top-booking-card">
-    <h2>Book Your Service Now</h2>
-    <p class="form-sub">Fill out the quick details below and our technician will contact you shortly.</p>
+<section class="top-booking-wrap" style="background: linear-gradient(180deg, #030712, #0b132b); padding: 45px 15px; font-family: sans-serif;">
+  <div class="top-booking-card" style="max-width: 680px; margin: 0 auto; background: #0b132b; border: 2px solid #00d2ff; border-radius: 18px; padding: 35px 25px; box-shadow: 0 0 30px rgba(0, 210, 255, 0.35);">
     
-    <div id="topBookingSuccess" style="display: none; background: #e6f4ea; color: #137333; padding: 12px; border-radius: 8px; margin-bottom: 18px; text-align: center; font-weight: 600; font-size: 14px;">
-      <p>Thank you! Your booking has been received successfully.</p>
+    <h2 style="color: #ffd700; font-size: 28px; font-weight: 900; margin: 0 0 8px 0; text-align: center; text-shadow: 0 0 12px rgba(255, 215, 0, 0.8); text-transform: uppercase;">Book Your Service Now</h2>
+    <p class="form-sub" style="color: #e2e8f0; font-size: 15px; text-align: center; margin: 0 0 25px 0; line-height: 1.5;">Fill out the quick details below and our technician will contact you shortly.</p>
+    
+    <div id="topBookingSuccess" style="display: none; background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1.5px solid #10b981; padding: 12px; border-radius: 10px; margin-bottom: 20px; text-align: center; font-weight: 700; font-size: 14px; box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);">
+      <p style="margin: 0;">Thank you! Your booking has been received successfully.</p>
     </div>
     
-    <form id="topBookingForm">
+    <form id="topBookingForm" style="display: flex; flex-direction: column; gap: 18px;">
       <input type="hidden" name="access_key" value="e9f3c609-80e4-412a-94fb-addff8fb1301">
       <input type="hidden" name="subject" value="New Service Booking from Website Top">
 
       <div class="top-form-group">
-        <input type="text" name="name" placeholder="Your Full Name" required />
+        <input type="text" name="name" placeholder="Your Full Name" required style="width: 100%; background: #030712; border: 1.5px solid #00d2ff; border-radius: 10px; padding: 13px 16px; color: #ffffff; font-size: 15px; font-weight: 600; outline: none; box-sizing: border-box; transition: 0.3s;" />
       </div>
 
       <div class="top-form-group">
-        <input type="text" name="mobile" placeholder="Mobile Number" required maxlength="10" minlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'')" />
+        <input type="text" name="mobile" placeholder="Mobile Number" required maxlength="10" minlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'')" style="width: 100%; background: #030712; border: 1.5px solid #00d2ff; border-radius: 10px; padding: 13px 16px; color: #ffffff; font-size: 15px; font-weight: 600; outline: none; box-sizing: border-box; transition: 0.3s;" />
       </div>
 
       <div class="top-form-group">
-        <select name="service" required>
-          <option value="" disabled selected>Select Service Required</option>
-          <option value="Flat AC Copper Piping Installation">Flat AC Copper Piping Installation</option>
-  <option value="Commercial AC Project Piping Work">Commercial AC Project Piping Work</option>
+        <select name="service" required style="width: 100%; background: #030712; border: 1.5px solid #00d2ff; border-radius: 10px; padding: 13px 16px; color: #ffd700; font-size: 15px; font-weight: 700; outline: none; box-sizing: border-box; cursor: pointer;">
+          <option value="" disabled selected style="color: #94a3b8; background: #030712;">Select Service Required</option>
+          <option value="Flat AC Copper Piping Installation" style="background: #0b132b; color: #ffffff;">Flat AC Copper Piping Installation</option>
+          <option value="Commercial AC Project Piping Work" style="background: #0b132b; color: #ffffff;">Commercial AC Project Piping Work</option>
 
-  <!-- Split AC -->
-  <option value="Split AC Service">Split AC Service</option>
-  <option value="Split AC Repair">Split AC Repair</option>
-  <option value="Split AC Gas Charging">Split AC Gas Charging</option>
-  <option value="Split AC Installation">Split AC Installation</option>
-  <option value="Split AC Uninstallation">Split AC Uninstallation</option>
-  
-  <!-- Window AC -->
-  <option value="Window AC Service">Window AC Service</option>
-  <option value="Window AC Repair">Window AC Repair</option>
-  <option value="Window AC Gas Charging">Window AC Gas Charging</option>
-  <option value="Window AC Installation">Window AC Installation</option>
-  <option value="Window AC Uninstallation">Window AC Uninstallation</option>
-  
-  <!-- Cassette AC -->
-  <option value="Cassette AC Service">Cassette AC Service</option>
-  <option value="Cassette AC Repair">Cassette AC Repair</option>
-  <option value="Cassette AC Gas Charging">Cassette AC Gas Charging</option>
-  <option value="Cassette AC Installation">Cassette AC Installation</option>
-  <option value="Cassette AC Uninstallation">Cassette AC Uninstallation</option>
+          <!-- Split AC -->
+          <option value="Split AC Service" style="background: #0b132b; color: #ffffff;">Split AC Service</option>
+          <option value="Split AC Repair" style="background: #0b132b; color: #ffffff;">Split AC Repair</option>
+          <option value="Split AC Gas Charging" style="background: #0b132b; color: #ffffff;">Split AC Gas Charging</option>
+          <option value="Split AC Installation" style="background: #0b132b; color: #ffffff;">Split AC Installation</option>
+          <option value="Split AC Uninstallation" style="background: #0b132b; color: #ffffff;">Split AC Uninstallation</option>
+          
+          <!-- Window AC -->
+          <option value="Window AC Service" style="background: #0b132b; color: #ffffff;">Window AC Service</option>
+          <option value="Window AC Repair" style="background: #0b132b; color: #ffffff;">Window AC Repair</option>
+          <option value="Window AC Gas Charging" style="background: #0b132b; color: #ffffff;">Window AC Gas Charging</option>
+          <option value="Window AC Installation" style="background: #0b132b; color: #ffffff;">Window AC Installation</option>
+          <option value="Window AC Uninstallation" style="background: #0b132b; color: #ffffff;">Window AC Uninstallation</option>
+          
+          <!-- Cassette AC -->
+          <option value="Cassette AC Service" style="background: #0b132b; color: #ffffff;">Cassette AC Service</option>
+          <option value="Cassette AC Repair" style="background: #0b132b; color: #ffffff;">Cassette AC Repair</option>
+          <option value="Cassette AC Gas Charging" style="background: #0b132b; color: #ffffff;">Cassette AC Gas Charging</option>
+          <option value="Cassette AC Installation" style="background: #0b132b; color: #ffffff;">Cassette AC Installation</option>
+          <option value="Cassette AC Uninstallation" style="background: #0b132b; color: #ffffff;">Cassette AC Uninstallation</option>
 
-  <!-- Tower AC -->
-  <option value="Tower AC Service">Tower AC Service</option>
-  <option value="Tower AC Repair">Tower AC Repair</option>
-  <option value="Tower AC Gas Charging">Tower AC Gas Charging</option>
-  <option value="Tower AC Installation">Tower AC Installation</option>
-  <option value="Tower AC Uninstallation">Tower AC Uninstallation</option>
-  
-  <!-- VRF AC (Commercial / Large Projects) -->
-  <option value="VRF AC Project Consultation & Designing">VRF AC Project Consultation & Designing</option>
-  <option value="VRF AC Piping & Installation Work">VRF AC Piping & Installation Work</option>
-  <option value="VRF AC Service & Maintenance">VRF AC Service & Maintenance</option>
-  <option value="VRF AC Repair & Gas Charging">VRF AC Repair & Gas Charging</option>
-  <option value="VRF AC Uninstallation">VRF AC Uninstallation</option>
-  
-  <!-- Ductable AC (Commercial / Large Projects) -->
-  <option value="Ductable AC Project Designing & Layout">Ductable AC Project Designing & Layout</option>
-  <option value="Ductable AC Ducting & Piping Work">Ductable AC Ducting & Piping Work</option>
-  <option value="Ductable AC Installation">Ductable AC Installation</option>
-  <option value="Ductable AC Service & Maintenance">Ductable AC Service & Maintenance</option>
-  <option value="Ductable AC Repair & Gas Charging">Ductable AC Repair & Gas Charging</option>
-  <option value="Ductable AC Uninstallation">Ductable AC Uninstallation</option>
-  
-  <!-- Package AC (Commercial) -->
-  <option value="Package AC Installation">Package AC Installation</option>
-  <option value="Package AC Service & Maintenance">Package AC Service & Maintenance</option>
-  <option value="Package AC Repair & Gas Charging">Package AC Repair & Gas Charging</option>
-  <option value="Package AC Uninstallation">Package AC Uninstallation</option>
-  
-  <!-- Refrigerator -->
-  <option value="Refrigerator Service">Refrigerator Service</option>
-  <option value="Refrigerator Repair">Refrigerator Repair</option>
-  <option value="Refrigerator Gas Charging">Refrigerator Gas Charging</option>
-  <option value="Refrigerator Installation">Refrigerator Installation</option>
-  <option value="Refrigerator Uninstallation">Refrigerator Uninstallation</option>
-  
-  <!-- Washing Machine -->
-  <option value="Washing Machine Service">Washing Machine Service</option>
-  <option value="Washing Machine Repair">Washing Machine Repair</option>
-  <option value="Washing Machine Installation">Washing Machine Installation</option>
-  <option value="Washing Machine Uninstallation">Washing Machine Uninstallation</option>
-  
-  <!-- Microwave Oven -->
-  <option value="Microwave Oven Service">Microwave Oven Service</option>
-  <option value="Microwave Oven Repair">Microwave Oven Repair</option>
-  <option value="Microwave Oven Installation">Microwave Oven Installation</option>
-  <option value="Microwave Oven Uninstallation">Microwave Oven Uninstallation</option>
+          <!-- Tower AC -->
+          <option value="Tower AC Service" style="background: #0b132b; color: #ffffff;">Tower AC Service</option>
+          <option value="Tower AC Repair" style="background: #0b132b; color: #ffffff;">Tower AC Repair</option>
+          <option value="Tower AC Gas Charging" style="background: #0b132b; color: #ffffff;">Tower AC Gas Charging</option>
+          <option value="Tower AC Installation" style="background: #0b132b; color: #ffffff;">Tower AC Installation</option>
+          <option value="Tower AC Uninstallation" style="background: #0b132b; color: #ffffff;">Tower AC Uninstallation</option>
+          
+          <!-- VRF AC (Commercial / Large Projects) -->
+          <option value="VRF AC Project Consultation & Designing" style="background: #0b132b; color: #ffffff;">VRF AC Project Consultation & Designing</option>
+          <option value="VRF AC Piping & Installation Work" style="background: #0b132b; color: #ffffff;">VRF AC Piping & Installation Work</option>
+          <option value="VRF AC Service & Maintenance" style="background: #0b132b; color: #ffffff;">VRF AC Service & Maintenance</option>
+          <option value="VRF AC Repair & Gas Charging" style="background: #0b132b; color: #ffffff;">VRF AC Repair & Gas Charging</option>
+          <option value="VRF AC Uninstallation" style="background: #0b132b; color: #ffffff;">VRF AC Uninstallation</option>
+          
+          <!-- Ductable AC (Commercial / Large Projects) -->
+          <option value="Ductable AC Project Designing & Layout" style="background: #0b132b; color: #ffffff;">Ductable AC Project Designing & Layout</option>
+          <option value="Ductable AC Ducting & Piping Work" style="background: #0b132b; color: #ffffff;">Ductable AC Ducting & Piping Work</option>
+          <option value="Ductable AC Installation" style="background: #0b132b; color: #ffffff;">Ductable AC Installation</option>
+          <option value="Ductable AC Service & Maintenance" style="background: #0b132b; color: #ffffff;">Ductable AC Service & Maintenance</option>
+          <option value="Ductable AC Repair & Gas Charging" style="background: #0b132b; color: #ffffff;">Ductable AC Repair & Gas Charging</option>
+          <option value="Ductable AC Uninstallation" style="background: #0b132b; color: #ffffff;">Ductable AC Uninstallation</option>
+          
+          <!-- Package AC (Commercial) -->
+          <option value="Package AC Installation" style="background: #0b132b; color: #ffffff;">Package AC Installation</option>
+          <option value="Package AC Service & Maintenance" style="background: #0b132b; color: #ffffff;">Package AC Service & Maintenance</option>
+          <option value="Package AC Repair & Gas Charging" style="background: #0b132b; color: #ffffff;">Package AC Repair & Gas Charging</option>
+          <option value="Package AC Uninstallation" style="background: #0b132b; color: #ffffff;">Package AC Uninstallation</option>
+          
+          <!-- Refrigerator -->
+          <option value="Refrigerator Service" style="background: #0b132b; color: #ffffff;">Refrigerator Service</option>
+          <option value="Refrigerator Repair" style="background: #0b132b; color: #ffffff;">Refrigerator Repair</option>
+          <option value="Refrigerator Gas Charging" style="background: #0b132b; color: #ffffff;">Refrigerator Gas Charging</option>
+          <option value="Refrigerator Installation" style="background: #0b132b; color: #ffffff;">Refrigerator Installation</option>
+          <option value="Refrigerator Uninstallation" style="background: #0b132b; color: #ffffff;">Refrigerator Uninstallation</option>
+          
+          <!-- Washing Machine -->
+          <option value="Washing Machine Service" style="background: #0b132b; color: #ffffff;">Washing Machine Service</option>
+          <option value="Washing Machine Repair" style="background: #0b132b; color: #ffffff;">Washing Machine Repair</option>
+          <option value="Washing Machine Installation" style="background: #0b132b; color: #ffffff;">Washing Machine Installation</option>
+          <option value="Washing Machine Uninstallation" style="background: #0b132b; color: #ffffff;">Washing Machine Uninstallation</option>
+          
+          <!-- Microwave Oven -->
+          <option value="Microwave Oven Service" style="background: #0b132b; color: #ffffff;">Microwave Oven Service</option>
+          <option value="Microwave Oven Repair" style="background: #0b132b; color: #ffffff;">Microwave Oven Repair</option>
+          <option value="Microwave Oven Installation" style="background: #0b132b; color: #ffffff;">Microwave Oven Installation</option>
+          <option value="Microwave Oven Uninstallation" style="background: #0b132b; color: #ffffff;">Microwave Oven Uninstallation</option>
         </select>
       </div>
 
       <div class="top-form-group">
-        <input type="text" name="area" placeholder="Enter Area / Society (Serving All Mumbai)" required />
+        <input type="text" name="area" placeholder="Enter Area / Society (Serving All Mumbai)" required style="width: 100%; background: #030712; border: 1.5px solid #00d2ff; border-radius: 10px; padding: 13px 16px; color: #ffffff; font-size: 15px; font-weight: 600; outline: none; box-sizing: border-box; transition: 0.3s;" />
       </div>
 
-      <button type="submit" class="top-submit-btn" id="topSubmitBtn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      <button type="submit" class="top-submit-btn" id="topSubmitBtn" style="background: linear-gradient(135deg, #FFD700, #FF8C00); color: #000000; border: none; border-radius: 12px; padding: 15px; font-weight: 900; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 0 20px #FFD700, 0 0 30px rgba(255, 140, 0, 0.8); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 8px; transition: 0.3s;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         Confirm Booking
       </button>
     </form>
@@ -327,67 +355,113 @@ function gtag_report_conversion(url) {
 </section>
 <!-- ================= END OF TOP BOOKING SECTION ================= -->
 
-<section class="section-padding">
+<!-- ========================= SERVICES SECTION ========================= -->
+<section class="section-padding" style="background: linear-gradient(180deg, #0b132b, #030712); padding: 50px 0; font-family: sans-serif; border-top: 2px solid #00d2ff;">
   <div class="container-custom">
-    <div class="section-header">
-      <span class="section-kicker">What We Do</span>
-      <h2 class="section-title">Our <span class="accent-text">Services</span></h2>
-      <p class="section-sub">We are a one-stop shop for all kinds of appliance repair, providing comprehensive services for most major brands in Mumbai, Thane, Navi Mumbai and beyond.</p>
+    
+    <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+      <span class="section-kicker" style="color: #ffd700; font-weight: 800; font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; text-shadow: 0 0 10px rgba(255,215,0,0.8);">What We Do</span>
+      <h2 class="section-title" style="color: #ffffff; font-size: 34px; font-weight: 900; margin: 10px 0; text-shadow: 0 0 15px rgba(255,255,255,0.4);">
+        Our <span class="accent-text" style="color: #00d2ff; text-shadow: 0 0 12px rgba(0,210,255,0.9);">Services</span>
+      </h2>
+      <p class="section-sub" style="color: #cbd5e1; font-size: 16px; max-width: 750px; margin: 0 auto; line-height: 1.6;">We are a one-stop shop for all kinds of appliance repair, providing comprehensive services for most major brands in Mumbai, Thane, Navi Mumbai and beyond.</p>
     </div>
-    <div class="services-overview-list">
-      <div class="overview-card">
-        <div class="thumb"><img src="images/service-ac.jpg" alt="Air Conditioner Repair" loading="lazy" /></div>
-        <div class="card-body">
-          <h3>Air Conditioner Repair</h3>
-          <p>Professional AC repair, maintenance, and cleaning for all brands and models including Split, Window, Tower, VRF, Package, Ductable and Cassette AC.</p>
-          <a href="ac-repair.html" class="btn-primary">View Details
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+
+    <div class="services-overview-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
+      
+      <!-- 1. AC Repair -->
+      <div class="overview-card" style="background: #0b132b; border: 2px solid #00d2ff; border-radius: 14px; overflow: hidden; box-shadow: 0 0 20px rgba(0,210,255,0.25); display: flex; flex-direction: column;">
+        <div class="thumb"><img src="images/service-ac.jpg" alt="Air Conditioner Repair" loading="lazy" style="width: 100%; height: 180px; object-fit: cover;" /></div>
+        <div class="card-body" style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <h3 style="color: #ffd700; font-size: 20px; font-weight: 800; margin-bottom: 10px; text-shadow: 0 0 8px rgba(255,215,0,0.6);">Air Conditioner Repair</h3>
+          <p style="color: #e2e8f0; font-size: 14px; line-height: 1.6; margin-bottom: 15px; flex-grow: 1;">Professional AC repair, maintenance, and cleaning for all brands and models including Split, Window, Tower, VRF, Package, Ductable and Cassette AC.</p>
+          
+          <a href="ac-repair.html" class="btn-primary" style="color: #00d2ff; text-decoration: none; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 15px;">
+            View Details
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
+
+          <div style="display: flex; gap: 10px; margin-top: auto;">
+            <a onclick="return gtag_report_conversion('tel:8655887167');" href="tel:8655887167" style="flex: 1; background: linear-gradient(135deg, #00c6ff, #0072ff); color: #fff; text-align: center; padding: 10px 0; border-radius: 8px; font-weight: 800; font-size: 12px; text-decoration: none; text-transform: uppercase; box-shadow: 0 0 12px rgba(0,114,255,0.8);">Call Now</a>
+            <a href="services.html" style="flex: 1; background: linear-gradient(135deg, #FFD700, #FF8C00); color: #000; text-align: center; padding: 10px 0; border-radius: 8px; font-weight: 800; font-size: 12px; text-decoration: none; text-transform: uppercase; box-shadow: 0 0 12px #FFD700;">Book Now</a>
+          </div>
         </div>
       </div>
-      <div class="overview-card">
-        <div class="thumb"><img src="images/service-washing-machine.jpg" alt="Washing Machine Repair" loading="lazy" /></div>
-        <div class="card-body">
-          <h3>Washing Machine Repair</h3>
-          <p>Quick and easy local repair and maintenance of front loading, top-load, fully automatic and semi-automatic washing machines of all major brands.</p>
-          <a href="washing-machine-repair.html" class="btn-primary">View Details
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+
+      <!-- 2. Washing Machine Repair -->
+      <div class="overview-card" style="background: #0b132b; border: 2px solid #ffd700; border-radius: 14px; overflow: hidden; box-shadow: 0 0 20px rgba(255,215,0,0.25); display: flex; flex-direction: column;">
+        <div class="thumb"><img src="images/service-washing-machine.jpg" alt="Washing Machine Repair" loading="lazy" style="width: 100%; height: 180px; object-fit: cover;" /></div>
+        <div class="card-body" style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <h3 style="color: #00d2ff; font-size: 20px; font-weight: 800; margin-bottom: 10px; text-shadow: 0 0 8px rgba(0,210,255,0.6);">Washing Machine Repair</h3>
+          <p style="color: #e2e8f0; font-size: 14px; line-height: 1.6; margin-bottom: 15px; flex-grow: 1;">Quick and easy local repair and maintenance of front loading, top-load, fully automatic and semi-automatic washing machines of all major brands.</p>
+          
+          <a href="washing-machine-repair.html" class="btn-primary" style="color: #ffd700; text-decoration: none; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 15px;">
+            View Details
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
+
+          <div style="display: flex; gap: 10px; margin-top: auto;">
+            <a onclick="return gtag_report_conversion('tel:8655887167');" href="tel:8655887167" style="flex: 1; background: linear-gradient(135deg, #f7971e, #ffd200); color: #000; text-align: center; padding: 10px 0; border-radius: 8px; font-weight: 800; font-size: 12px; text-decoration: none; text-transform: uppercase; box-shadow: 0 0 12px rgba(255,210,0,0.8);">Call Now</a>
+            <a href="services.html" style="flex: 1; background: linear-gradient(135deg, #ff416c, #ff4b2b); color: #fff; text-align: center; padding: 10px 0; border-radius: 8px; font-weight: 800; font-size: 12px; text-decoration: none; text-transform: uppercase; box-shadow: 0 0 12px rgba(255,65,108,0.8);">Book Now</a>
+          </div>
         </div>
       </div>
-      <div class="overview-card">
-        <div class="thumb"><img src="images/service-refrigerator.jpg" alt="Refrigerator Repair" loading="lazy" /></div>
-        <div class="card-body">
-          <h3>Refrigerator Repair</h3>
-          <p>Professional repair of all types of fridge &amp; freezers including single door, double door, side by side, French door and mini fridges.</p>
-          <a href="refrigerator-repair.html" class="btn-primary">View Details
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+
+      <!-- 3. Refrigerator Repair -->
+      <div class="overview-card" style="background: #0b132b; border: 2px solid #10b981; border-radius: 14px; overflow: hidden; box-shadow: 0 0 20px rgba(16,185,129,0.25); display: flex; flex-direction: column;">
+        <div class="thumb"><img src="images/service-refrigerator.jpg" alt="Refrigerator Repair" loading="lazy" style="width: 100%; height: 180px; object-fit: cover;" /></div>
+        <div class="card-body" style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <h3 style="color: #10b981; font-size: 20px; font-weight: 800; margin-bottom: 10px; text-shadow: 0 0 8px rgba(16,185,129,0.7);">Refrigerator Repair</h3>
+          <p style="color: #e2e8f0; font-size: 14px; line-height: 1.6; margin-bottom: 15px; flex-grow: 1;">Professional repair of all types of fridge &amp; freezers including single door, double door, side by side, French door and mini fridges.</p>
+          
+          <a href="refrigerator-repair.html" class="btn-primary" style="color: #10b981; text-decoration: none; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 15px;">
+            View Details
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
+
+          <div style="display: flex; gap: 10px; margin-top: auto;">
+            <a onclick="return gtag_report_conversion('tel:8655887167');" href="tel:8655887167" style="flex: 1; background: linear-gradient(135deg, #10b981, #047857); color: #fff; text-align: center; padding: 10px 0; border-radius: 8px; font-weight: 800; font-size: 12px; text-decoration: none; text-transform: uppercase; box-shadow: 0 0 12px rgba(16,185,129,0.8);">Call Now</a>
+            <a href="services.html" style="flex: 1; background: linear-gradient(135deg, #34d399, #059669); color: #000; text-align: center; padding: 10px 0; border-radius: 8px; font-weight: 800; font-size: 12px; text-decoration: none; text-transform: uppercase; box-shadow: 0 0 12px rgba(52,211,153,0.8);">Book Now</a>
+          </div>
         </div>
       </div>
-      <div class="overview-card">
-        <div class="thumb"><img src="images/service-microwave.jpg" alt="Microwave Oven Repair" loading="lazy" /></div>
-        <div class="card-body">
-          <h3>Microwave Oven Repair</h3>
-          <p>Expert microwave oven repair for countertop, over-the-range, built-in, undercounter and convection microwaves of all brands.</p>
-          <a href="microwave-oven-repair.html" class="btn-primary">View Details
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+
+      <!-- 4. Microwave Oven Repair -->
+      <div class="overview-card" style="background: #0b132b; border: 2px solid #a855f7; border-radius: 14px; overflow: hidden; box-shadow: 0 0 20px rgba(168,85,247,0.25); display: flex; flex-direction: column;">
+        <div class="thumb"><img src="images/service-microwave.jpg" alt="Microwave Oven Repair" loading="lazy" style="width: 100%; height: 180px; object-fit: cover;" /></div>
+        <div class="card-body" style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <h3 style="color: #c084fc; font-size: 20px; font-weight: 800; margin-bottom: 10px; text-shadow: 0 0 8px rgba(192,132,252,0.7);">Microwave Oven Repair</h3>
+          <p style="color: #e2e8f0; font-size: 14px; line-height: 1.6; margin-bottom: 15px; flex-grow: 1;">Expert microwave oven repair for countertop, over-the-range, built-in, undercounter and convection microwaves of all brands.</p>
+          
+          <a href="microwave-oven-repair.html" class="btn-primary" style="color: #c084fc; text-decoration: none; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 15px;">
+            View Details
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
+
+          <div style="display: flex; gap: 10px; margin-top: auto;">
+            <a onclick="return gtag_report_conversion('tel:8655887167');" href="tel:8655887167" style="flex: 1; background: linear-gradient(135deg, #a855f7, #6b21a8); color: #fff; text-align: center; padding: 10px 0; border-radius: 8px; font-weight: 800; font-size: 12px; text-decoration: none; text-transform: uppercase; box-shadow: 0 0 12px rgba(168,85,247,0.8);">Call Now</a>
+            <a href="services.html" style="flex: 1; background: linear-gradient(135deg, #ec4899, #be185d); color: #fff; text-align: center; padding: 10px 0; border-radius: 8px; font-weight: 800; font-size: 12px; text-decoration: none; text-transform: uppercase; box-shadow: 0 0 12px rgba(236,72,153,0.8);">Book Now</a>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="container-custom">
+<!-- ========================= CTA BAND ========================= -->
+<section class="cta-band" style="background: rgba(0, 210, 255, 0.08); border-top: 2px dashed #ffd700; border-bottom: 2px solid #00d2ff; padding: 40px 15px; font-family: sans-serif;">
+  <div class="container-custom" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
     <div>
-      <h2>Looking For A Fast &amp; Reliable Repair Service</h2>
-      <p>If you want to discuss your business with our fine consultants, please schedule a meeting through this button.</p>
+      <h2 style="color: #ffd700; font-size: 26px; font-weight: 900; margin: 0 0 8px 0; text-shadow: 0 0 10px rgba(255,215,0,0.8);">Looking For A Fast &amp; Reliable Repair Service</h2>
+      <p style="color: #cbd5e1; font-size: 15px; margin: 0; line-height: 1.5;">If you want to discuss your business with our fine consultants, please schedule a meeting through this button.</p>
     </div>
-    <div>
-      <button class="btn-primary" onclick="openEnquiryModal()">Enquire Now
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+      <a onclick="return gtag_report_conversion('tel:8655887167');" href="tel:8655887167" style="background: linear-gradient(135deg, #00c6ff, #0072ff); color: #ffffff; padding: 12px 24px; border-radius: 25px; font-weight: 900; font-size: 13px; text-decoration: none; text-transform: uppercase; box-shadow: 0 0 15px rgba(0,114,255,0.8);">📞 Call Now</a>
+      <a href="services.html" style="background: linear-gradient(135deg, #FFD700, #FF8C00); color: #000000; padding: 12px 24px; border-radius: 25px; font-weight: 900; font-size: 13px; text-decoration: none; text-transform: uppercase; box-shadow: 0 0 15px #FFD700;">📅 Book Now</a>
+      <button class="btn-primary" onclick="openEnquiryModal()" style="background: linear-gradient(135deg, #10b981, #059669); color: #ffffff; border: none; padding: 12px 24px; border-radius: 25px; font-weight: 900; font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; text-transform: uppercase; box-shadow: 0 0 15px rgba(16,185,129,0.8);">
+        Enquire Now
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
     </div>
   </div>
